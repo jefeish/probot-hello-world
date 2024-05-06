@@ -1,0 +1,1048 @@
+{
+  "actions": [
+    {
+      "isMajor": true,
+      "action": "install",
+      "resolves": [
+        {
+          "id": 1088948,
+          "path": "probot>update-notifier>latest-version>package-json>got",
+          "dev": false,
+          "optional": false,
+          "bundled": false
+        },
+        {
+          "id": 1095251,
+          "path": "probot",
+          "dev": false,
+          "optional": false,
+          "bundled": false
+        },
+        {
+          "id": 1095257,
+          "path": "probot>@octokit/webhooks",
+          "dev": false,
+          "optional": false,
+          "bundled": false
+        },
+        {
+          "id": 1096484,
+          "path": "probot>update-notifier>semver-diff>semver",
+          "dev": false,
+          "optional": false,
+          "bundled": false
+        },
+        {
+          "id": 1096484,
+          "path": "probot>update-notifier>configstore>make-dir>semver",
+          "dev": false,
+          "optional": false,
+          "bundled": false
+        }
+      ],
+      "module": "probot",
+      "target": "13.2.1"
+    },
+    {
+      "action": "update",
+      "resolves": [
+        {
+          "id": 1089434,
+          "path": "probot>octokit-auth-probot>@octokit/auth-app>universal-github-app-jwt>jsonwebtoken",
+          "dev": false,
+          "optional": false,
+          "bundled": false
+        },
+        {
+          "id": 1091087,
+          "path": "probot>octokit-auth-probot>@octokit/auth-app>universal-github-app-jwt>jsonwebtoken",
+          "dev": false,
+          "optional": false,
+          "bundled": false
+        },
+        {
+          "id": 1092549,
+          "path": "probot>octokit-auth-probot>@octokit/auth-app>universal-github-app-jwt>jsonwebtoken",
+          "dev": false,
+          "optional": false,
+          "bundled": false
+        },
+        {
+          "id": 1096483,
+          "path": "probot>octokit-auth-probot>@octokit/auth-app>universal-github-app-jwt>jsonwebtoken>semver",
+          "dev": false,
+          "optional": false,
+          "bundled": false
+        }
+      ],
+      "module": "octokit-auth-probot",
+      "target": "1.2.9",
+      "depth": 2
+    },
+    {
+      "action": "update",
+      "resolves": [
+        {
+          "id": 1091138,
+          "path": "probot>eventsource>original>url-parse",
+          "dev": false,
+          "optional": false,
+          "bundled": false
+        },
+        {
+          "id": 1093715,
+          "path": "probot>eventsource>original>url-parse",
+          "dev": false,
+          "optional": false,
+          "bundled": false
+        },
+        {
+          "id": 1093716,
+          "path": "probot>eventsource>original>url-parse",
+          "dev": false,
+          "optional": false,
+          "bundled": false
+        },
+        {
+          "id": 1095095,
+          "path": "probot>eventsource>original>url-parse",
+          "dev": false,
+          "optional": false,
+          "bundled": false
+        }
+      ],
+      "module": "url-parse",
+      "target": "1.5.10",
+      "depth": 4
+    },
+    {
+      "action": "update",
+      "resolves": [
+        {
+          "id": 1092316,
+          "path": "probot>update-notifier>latest-version>package-json>got>cacheable-request>http-cache-semantics",
+          "dev": false,
+          "optional": false,
+          "bundled": false
+        }
+      ],
+      "module": "http-cache-semantics",
+      "target": "4.1.1",
+      "depth": 7
+    },
+    {
+      "action": "update",
+      "resolves": [
+        {
+          "id": 1095006,
+          "path": "probot>eventsource",
+          "dev": false,
+          "optional": false,
+          "bundled": false
+        }
+      ],
+      "module": "eventsource",
+      "target": "1.1.2",
+      "depth": 2
+    },
+    {
+      "action": "update",
+      "resolves": [
+        {
+          "id": 1095073,
+          "path": "probot>@octokit/core>@octokit/request>node-fetch",
+          "dev": false,
+          "optional": false,
+          "bundled": false
+        },
+        {
+          "id": 1095073,
+          "path": "probot>@octokit/core>@octokit/graphql>@octokit/request>node-fetch",
+          "dev": false,
+          "optional": false,
+          "bundled": false
+        },
+        {
+          "id": 1095073,
+          "path": "probot>octokit-auth-probot>@octokit/auth-app>@octokit/auth-oauth-user>@octokit/request>node-fetch",
+          "dev": false,
+          "optional": false,
+          "bundled": false
+        },
+        {
+          "id": 1095073,
+          "path": "probot>octokit-auth-probot>@octokit/auth-app>@octokit/auth-oauth-user>@octokit/oauth-methods>@octokit/request>node-fetch",
+          "dev": false,
+          "optional": false,
+          "bundled": false
+        },
+        {
+          "id": 1095073,
+          "path": "probot>octokit-auth-probot>@octokit/auth-app>@octokit/auth-oauth-app>@octokit/auth-oauth-device>@octokit/oauth-methods>@octokit/request>node-fetch",
+          "dev": false,
+          "optional": false,
+          "bundled": false
+        },
+        {
+          "id": 1095073,
+          "path": "probot>octokit-auth-probot>@octokit/auth-app>@octokit/auth-oauth-app>@octokit/auth-oauth-user>@octokit/auth-oauth-device>@octokit/oauth-methods>@octokit/request>node-fetch",
+          "dev": false,
+          "optional": false,
+          "bundled": false
+        }
+      ],
+      "module": "node-fetch",
+      "target": "2.7.0",
+      "depth": 9
+    },
+    {
+      "action": "update",
+      "resolves": [
+        {
+          "id": 1096472,
+          "path": "probot>express>qs",
+          "dev": false,
+          "optional": false,
+          "bundled": false
+        },
+        {
+          "id": 1096472,
+          "path": "probot>express>body-parser>qs",
+          "dev": false,
+          "optional": false,
+          "bundled": false
+        },
+        {
+          "id": 1096820,
+          "path": "probot>express",
+          "dev": false,
+          "optional": false,
+          "bundled": false
+        }
+      ],
+      "module": "express",
+      "target": "4.19.2",
+      "depth": 2
+    },
+    {
+      "action": "update",
+      "resolves": [
+        {
+          "id": 1096482,
+          "path": "probot>semver",
+          "dev": false,
+          "optional": false,
+          "bundled": false
+        },
+        {
+          "id": 1096482,
+          "path": "probot>update-notifier>semver",
+          "dev": false,
+          "optional": false,
+          "bundled": false
+        }
+      ],
+      "module": "semver",
+      "target": "7.6.0",
+      "depth": 3
+    },
+    {
+      "action": "update",
+      "resolves": [
+        {
+          "id": 1096549,
+          "path": "probot>hbs>handlebars>minimist",
+          "dev": false,
+          "optional": false,
+          "bundled": false
+        },
+        {
+          "id": 1096549,
+          "path": "probot>update-notifier>latest-version>package-json>registry-auth-token>rc>minimist",
+          "dev": false,
+          "optional": false,
+          "bundled": false
+        }
+      ],
+      "module": "minimist",
+      "target": "1.2.8",
+      "depth": 7
+    }
+  ],
+  "advisories": {
+    "1088948": {
+      "findings": [
+        {
+          "version": "9.6.0",
+          "paths": [
+            "probot>update-notifier>latest-version>package-json>got"
+          ]
+        }
+      ],
+      "metadata": null,
+      "vulnerable_versions": "<11.8.5",
+      "module_name": "got",
+      "severity": "moderate",
+      "github_advisory_id": "GHSA-pfrx-2q88-qq97",
+      "cves": [
+        "CVE-2022-33987"
+      ],
+      "access": "public",
+      "patched_versions": ">=11.8.5",
+      "cvss": {
+        "score": 5.3,
+        "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N"
+      },
+      "updated": "2023-01-27T05:05:01.000Z",
+      "recommendation": "Upgrade to version 11.8.5 or later",
+      "cwe": [],
+      "found_by": null,
+      "deleted": null,
+      "id": 1088948,
+      "references": "- https://nvd.nist.gov/vuln/detail/CVE-2022-33987\n- https://github.com/sindresorhus/got/pull/2047\n- https://github.com/sindresorhus/got/compare/v12.0.3...v12.1.0\n- https://github.com/sindresorhus/got/commit/861ccd9ac2237df762a9e2beed7edd88c60782dc\n- https://github.com/sindresorhus/got/releases/tag/v11.8.5\n- https://github.com/sindresorhus/got/releases/tag/v12.1.0\n- https://github.com/advisories/GHSA-pfrx-2q88-qq97",
+      "created": "2022-06-19T00:00:21.000Z",
+      "reported_by": null,
+      "title": "Got allows a redirect to a UNIX socket",
+      "npm_advisory_id": null,
+      "overview": "The got package before 11.8.5 and 12.1.0 for Node.js allows a redirect to a UNIX socket.",
+      "url": "https://github.com/advisories/GHSA-pfrx-2q88-qq97"
+    },
+    "1089434": {
+      "findings": [
+        {
+          "version": "8.5.1",
+          "paths": [
+            "probot>octokit-auth-probot>@octokit/auth-app>universal-github-app-jwt>jsonwebtoken"
+          ]
+        }
+      ],
+      "metadata": null,
+      "vulnerable_versions": "<=8.5.1",
+      "module_name": "jsonwebtoken",
+      "severity": "moderate",
+      "github_advisory_id": "GHSA-8cf7-32gw-wr33",
+      "cves": [
+        "CVE-2022-23539"
+      ],
+      "access": "public",
+      "patched_versions": ">=9.0.0",
+      "cvss": {
+        "score": 0,
+        "vectorString": null
+      },
+      "updated": "2023-01-31T05:01:09.000Z",
+      "recommendation": "Upgrade to version 9.0.0 or later",
+      "cwe": [
+        "CWE-327"
+      ],
+      "found_by": null,
+      "deleted": null,
+      "id": 1089434,
+      "references": "- https://github.com/auth0/node-jsonwebtoken/security/advisories/GHSA-8cf7-32gw-wr33\n- https://github.com/auth0/node-jsonwebtoken/commit/e1fa9dcc12054a8681db4e6373da1b30cf7016e3\n- https://nvd.nist.gov/vuln/detail/CVE-2022-23539\n- https://github.com/advisories/GHSA-8cf7-32gw-wr33",
+      "created": "2022-12-22T03:32:22.000Z",
+      "reported_by": null,
+      "title": "jsonwebtoken unrestricted key type could lead to legacy keys usage ",
+      "npm_advisory_id": null,
+      "overview": "# Overview\n\nVersions `<=8.5.1` of `jsonwebtoken` library could be misconfigured so that legacy, insecure key types are used for signature verification. For example, DSA keys could be used with the RS256 algorithm. \n\n# Am I affected?\n\nYou are affected if you are using an algorithm and a key type other than the combinations mentioned below\n\n| Key type |  algorithm                                    |\n|----------|------------------------------------------|\n| ec           | ES256, ES384, ES512                      |\n| rsa          | RS256, RS384, RS512, PS256, PS384, PS512 |\n| rsa-pss  | PS256, PS384, PS512                      |\n\nAnd for Elliptic Curve algorithms:\n\n| `alg` | Curve      |\n|-------|------------|\n| ES256 | prime256v1 |\n| ES384 | secp384r1  |\n| ES512 | secp521r1  |\n\n# How do I fix it?\n\nUpdate to version 9.0.0. This version validates for asymmetric key type and algorithm combinations. Please refer to the above mentioned algorithm / key type combinations for the valid secure configuration. After updating to version 9.0.0, If you still intend to continue with signing or verifying tokens using invalid key type/algorithm value combinations, you’ll need to set the `allowInvalidAsymmetricKeyTypes` option  to `true` in the `sign()` and/or `verify()` functions.\n\n# Will the fix impact my users?\n\nThere will be no impact, if you update to version 9.0.0 and you already use a valid secure combination of key type and algorithm. Otherwise,  use the  `allowInvalidAsymmetricKeyTypes` option  to `true` in the `sign()` and `verify()` functions to continue usage of invalid key type/algorithm combination in 9.0.0 for legacy compatibility. \n\n",
+      "url": "https://github.com/advisories/GHSA-8cf7-32gw-wr33"
+    },
+    "1091087": {
+      "findings": [
+        {
+          "version": "8.5.1",
+          "paths": [
+            "probot>octokit-auth-probot>@octokit/auth-app>universal-github-app-jwt>jsonwebtoken"
+          ]
+        }
+      ],
+      "metadata": null,
+      "vulnerable_versions": "<=8.5.1",
+      "module_name": "jsonwebtoken",
+      "severity": "moderate",
+      "github_advisory_id": "GHSA-hjrf-2m68-5959",
+      "cves": [
+        "CVE-2022-23541"
+      ],
+      "access": "public",
+      "patched_versions": ">=9.0.0",
+      "cvss": {
+        "score": 5,
+        "vectorString": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:L/A:L"
+      },
+      "updated": "2023-01-29T05:06:34.000Z",
+      "recommendation": "Upgrade to version 9.0.0 or later",
+      "cwe": [
+        "CWE-287"
+      ],
+      "found_by": null,
+      "deleted": null,
+      "id": 1091087,
+      "references": "- https://github.com/auth0/node-jsonwebtoken/security/advisories/GHSA-hjrf-2m68-5959\n- https://github.com/auth0/node-jsonwebtoken/commit/e1fa9dcc12054a8681db4e6373da1b30cf7016e3\n- https://nvd.nist.gov/vuln/detail/CVE-2022-23541\n- https://github.com/auth0/node-jsonwebtoken/releases/tag/v9.0.0\n- https://github.com/advisories/GHSA-hjrf-2m68-5959",
+      "created": "2022-12-22T03:33:19.000Z",
+      "reported_by": null,
+      "title": "jsonwebtoken's insecure implementation of key retrieval function could lead to Forgeable Public/Private Tokens from RSA to HMAC",
+      "npm_advisory_id": null,
+      "overview": "# Overview\n\nVersions `<=8.5.1` of `jsonwebtoken` library can be misconfigured so that passing a poorly implemented key retrieval function (referring to the `secretOrPublicKey` argument from the [readme link](https://github.com/auth0/node-jsonwebtoken#jwtverifytoken-secretorpublickey-options-callback)) will result in incorrect verification of tokens. There is a possibility of using a different algorithm and key combination in verification  than the one that was used to sign the tokens. Specifically, tokens signed with an asymmetric public key could be verified with a symmetric HS256 algorithm. This can lead to successful validation of forged tokens. \n\n# Am I affected?\n\nYou will be affected if your application is supporting usage of both symmetric key and asymmetric key in jwt.verify() implementation with the same key retrieval function. \n\n# How do I fix it?\n \nUpdate to version 9.0.0.\n\n# Will the fix impact my users?\n\nThere is no impact for end users",
+      "url": "https://github.com/advisories/GHSA-hjrf-2m68-5959"
+    },
+    "1091138": {
+      "findings": [
+        {
+          "version": "1.5.3",
+          "paths": [
+            "probot>eventsource>original>url-parse"
+          ]
+        }
+      ],
+      "metadata": null,
+      "vulnerable_versions": "<1.5.6",
+      "module_name": "url-parse",
+      "severity": "moderate",
+      "github_advisory_id": "GHSA-rqff-837h-mm52",
+      "cves": [
+        "CVE-2022-0512"
+      ],
+      "access": "public",
+      "patched_versions": ">=1.5.6",
+      "cvss": {
+        "score": 5.3,
+        "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N"
+      },
+      "updated": "2023-02-23T22:07:29.000Z",
+      "recommendation": "Upgrade to version 1.5.6 or later",
+      "cwe": [
+        "CWE-639"
+      ],
+      "found_by": null,
+      "deleted": null,
+      "id": 1091138,
+      "references": "- https://nvd.nist.gov/vuln/detail/CVE-2022-0512\n- https://github.com/unshiftio/url-parse/commit/9be7ee88afd2bb04e4d5a1a8da9a389ac13f8c40\n- https://huntr.dev/bounties/6d1bc51f-1876-4f5b-a2c2-734e09e8e05b\n- https://lists.debian.org/debian-lts-announce/2023/02/msg00030.html\n- https://github.com/advisories/GHSA-rqff-837h-mm52",
+      "created": "2022-02-15T00:02:46.000Z",
+      "reported_by": null,
+      "title": "Authorization bypass in url-parse",
+      "npm_advisory_id": null,
+      "overview": "Authorization Bypass Through User-Controlled Key in NPM url-parse prior to 1.5.6.",
+      "url": "https://github.com/advisories/GHSA-rqff-837h-mm52"
+    },
+    "1092316": {
+      "findings": [
+        {
+          "version": "4.1.0",
+          "paths": [
+            "probot>update-notifier>latest-version>package-json>got>cacheable-request>http-cache-semantics"
+          ]
+        }
+      ],
+      "metadata": null,
+      "vulnerable_versions": "<4.1.1",
+      "module_name": "http-cache-semantics",
+      "severity": "high",
+      "github_advisory_id": "GHSA-rc47-6667-2j5j",
+      "cves": [
+        "CVE-2022-25881"
+      ],
+      "access": "public",
+      "patched_versions": ">=4.1.1",
+      "cvss": {
+        "score": 7.5,
+        "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+      },
+      "updated": "2023-06-22T17:26:15.000Z",
+      "recommendation": "Upgrade to version 4.1.1 or later",
+      "cwe": [
+        "CWE-1333"
+      ],
+      "found_by": null,
+      "deleted": null,
+      "id": 1092316,
+      "references": "- https://nvd.nist.gov/vuln/detail/CVE-2022-25881\n- https://github.com/kornelski/http-cache-semantics/blob/master/index.js%23L83\n- https://security.snyk.io/vuln/SNYK-JAVA-ORGWEBJARSNPM-3253332\n- https://security.snyk.io/vuln/SNYK-JS-HTTPCACHESEMANTICS-3248783\n- https://github.com/kornelski/http-cache-semantics/commit/560b2d8ef452bbba20ffed69dc155d63ac757b74\n- https://security.netapp.com/advisory/ntap-20230622-0008/\n- https://github.com/advisories/GHSA-rc47-6667-2j5j",
+      "created": "2023-01-31T06:30:26.000Z",
+      "reported_by": null,
+      "title": "http-cache-semantics vulnerable to Regular Expression Denial of Service",
+      "npm_advisory_id": null,
+      "overview": "http-cache semantics contains an Inefficient Regular Expression Complexity , leading to Denial of Service. This affects versions of the package http-cache-semantics before 4.1.1. The issue can be exploited via malicious request header values sent to a server, when that server reads the cache policy from the request using this library.",
+      "url": "https://github.com/advisories/GHSA-rc47-6667-2j5j"
+    },
+    "1092549": {
+      "findings": [
+        {
+          "version": "8.5.1",
+          "paths": [
+            "probot>octokit-auth-probot>@octokit/auth-app>universal-github-app-jwt>jsonwebtoken"
+          ]
+        }
+      ],
+      "metadata": null,
+      "vulnerable_versions": "<9.0.0",
+      "module_name": "jsonwebtoken",
+      "severity": "moderate",
+      "github_advisory_id": "GHSA-qwph-4952-7xr6",
+      "cves": [
+        "CVE-2022-23540"
+      ],
+      "access": "public",
+      "patched_versions": ">=9.0.0",
+      "cvss": {
+        "score": 6.4,
+        "vectorString": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:H/A:L"
+      },
+      "updated": "2023-07-14T22:03:14.000Z",
+      "recommendation": "Upgrade to version 9.0.0 or later",
+      "cwe": [
+        "CWE-287",
+        "CWE-327",
+        "CWE-347"
+      ],
+      "found_by": null,
+      "deleted": null,
+      "id": 1092549,
+      "references": "- https://github.com/auth0/node-jsonwebtoken/security/advisories/GHSA-qwph-4952-7xr6\n- https://github.com/auth0/node-jsonwebtoken/commit/e1fa9dcc12054a8681db4e6373da1b30cf7016e3\n- https://nvd.nist.gov/vuln/detail/CVE-2022-23540\n- https://github.com/advisories/GHSA-qwph-4952-7xr6",
+      "created": "2022-12-22T03:32:59.000Z",
+      "reported_by": null,
+      "title": "jsonwebtoken vulnerable to signature validation bypass due to insecure default algorithm in jwt.verify()",
+      "npm_advisory_id": null,
+      "overview": "# Overview\n\nIn versions <=8.5.1 of jsonwebtoken library, lack of algorithm definition and a falsy secret or key in the `jwt.verify()` function can lead to signature validation bypass due to defaulting to the `none` algorithm for signature verification.\n\n# Am I affected?\nYou will be affected if all the following are true in the `jwt.verify()` function:\n- a token with no signature is received\n- no algorithms are specified \n- a falsy (e.g. null, false, undefined) secret or key is passed \n\n# How do I fix it?\n \nUpdate to version 9.0.0 which removes the default support for the none algorithm in the `jwt.verify()` method. \n\n# Will the fix impact my users?\n\nThere will be no impact, if you update to version 9.0.0 and you don’t need to allow for the `none` algorithm. If you need 'none' algorithm, you have to explicitly specify that in `jwt.verify()` options.\n",
+      "url": "https://github.com/advisories/GHSA-qwph-4952-7xr6"
+    },
+    "1093715": {
+      "findings": [
+        {
+          "version": "1.5.3",
+          "paths": [
+            "probot>eventsource>original>url-parse"
+          ]
+        }
+      ],
+      "metadata": null,
+      "vulnerable_versions": "<1.5.9",
+      "module_name": "url-parse",
+      "severity": "moderate",
+      "github_advisory_id": "GHSA-jf5r-8hm2-f872",
+      "cves": [
+        "CVE-2022-0691"
+      ],
+      "access": "public",
+      "patched_versions": ">=1.5.9",
+      "cvss": {
+        "score": 6.5,
+        "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N"
+      },
+      "updated": "2023-09-11T22:57:15.000Z",
+      "recommendation": "Upgrade to version 1.5.9 or later",
+      "cwe": [
+        "CWE-639"
+      ],
+      "found_by": null,
+      "deleted": null,
+      "id": 1093715,
+      "references": "- https://nvd.nist.gov/vuln/detail/CVE-2022-0691\n- https://github.com/unshiftio/url-parse/commit/0e3fb542d60ddbf6933f22eb9b1e06e25eaa5b63\n- https://huntr.dev/bounties/57124ed5-4b68-4934-8325-2c546257f2e4\n- https://security.netapp.com/advisory/ntap-20220325-0006/\n- https://lists.debian.org/debian-lts-announce/2023/02/msg00030.html\n- https://github.com/advisories/GHSA-jf5r-8hm2-f872",
+      "created": "2022-02-22T00:00:30.000Z",
+      "reported_by": null,
+      "title": "url-parse incorrectly parses hostname / protocol due to unstripped leading control characters.",
+      "npm_advisory_id": null,
+      "overview": "Leading control characters in a URL are not stripped when passed into url-parse. This can cause input URLs to be mistakenly be interpreted as a relative URL without a hostname and protocol, while the WHATWG URL parser will trim control characters and treat it as an absolute URL.\n\nIf url-parse is used in security decisions involving the hostname / protocol, and the input URL is used in a client which uses the WHATWG URL parser, the decision may be incorrect.\n\nThis can also lead to a cross-site scripting (XSS) vulnerability if url-parse is used to check for the javascript: protocol in URLs. See following example:\n```js\nconst parse = require('url-parse')\nconst express = require('express')\nconst app = express()\nconst port = 3000\n\nurl = parse(\\\"\\\\bjavascript:alert(1)\\\")\n\nconsole.log(url)\n\napp.get('/', (req, res) => {\n if (url.protocol !== \\\"javascript:\\\") {res.send(\\\"<a href=\\\\'\\\" + url.href + \\\"\\\\'>CLICK ME!</a>\\\")}\n })\n\napp.listen(port, () => {\n console.log(`Example app listening on port ${port}`)\n })\n```",
+      "url": "https://github.com/advisories/GHSA-jf5r-8hm2-f872"
+    },
+    "1093716": {
+      "findings": [
+        {
+          "version": "1.5.3",
+          "paths": [
+            "probot>eventsource>original>url-parse"
+          ]
+        }
+      ],
+      "metadata": null,
+      "vulnerable_versions": "<1.5.7",
+      "module_name": "url-parse",
+      "severity": "moderate",
+      "github_advisory_id": "GHSA-8v38-pw62-9cw2",
+      "cves": [
+        "CVE-2022-0639"
+      ],
+      "access": "public",
+      "patched_versions": ">=1.5.7",
+      "cvss": {
+        "score": 6.5,
+        "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N"
+      },
+      "updated": "2023-09-11T22:51:44.000Z",
+      "recommendation": "Upgrade to version 1.5.7 or later",
+      "cwe": [
+        "CWE-639"
+      ],
+      "found_by": null,
+      "deleted": null,
+      "id": 1093716,
+      "references": "- https://nvd.nist.gov/vuln/detail/CVE-2022-0639\n- https://github.com/unshiftio/url-parse/commit/ef45a1355375a8244063793a19059b4f62fc8788\n- https://huntr.dev/bounties/83a6bc9a-b542-4a38-82cd-d995a1481155\n- https://lists.debian.org/debian-lts-announce/2023/02/msg00030.html\n- https://github.com/advisories/GHSA-8v38-pw62-9cw2",
+      "created": "2022-02-18T00:00:33.000Z",
+      "reported_by": null,
+      "title": "url-parse Incorrectly parses URLs that include an '@'",
+      "npm_advisory_id": null,
+      "overview": "A specially crafted URL with an '@' sign but empty user info and no hostname, when parsed with url-parse, url-parse will return the incorrect href. In particular,\n\n```js\nparse(\\\"http://@/127.0.0.1\\\")\n```\nWill return:\n```yaml\n{\n slashes: true,\n protocol: 'http:',\n hash: '',\n query: '',\n pathname: '/127.0.0.1',\n auth: '',\n host: '',\n port: '',\n hostname: '',\n password: '',\n username: '',\n origin: 'null',\n href: 'http:///127.0.0.1'\n }\n```\nIf the 'hostname' or 'origin' attributes of the output from url-parse are used in security decisions and the final 'href' attribute of the output is then used to make a request, the decision may be incorrect.\n",
+      "url": "https://github.com/advisories/GHSA-8v38-pw62-9cw2"
+    },
+    "1095006": {
+      "findings": [
+        {
+          "version": "1.1.0",
+          "paths": [
+            "probot>eventsource"
+          ]
+        }
+      ],
+      "metadata": null,
+      "vulnerable_versions": "<1.1.1",
+      "module_name": "eventsource",
+      "severity": "critical",
+      "github_advisory_id": "GHSA-6h5x-7c5m-7cr7",
+      "cves": [
+        "CVE-2022-1650"
+      ],
+      "access": "public",
+      "patched_versions": ">=1.1.1",
+      "cvss": {
+        "score": 9.3,
+        "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:N"
+      },
+      "updated": "2023-11-28T23:43:16.000Z",
+      "recommendation": "Upgrade to version 1.1.1 or later",
+      "cwe": [
+        "CWE-200",
+        "CWE-212"
+      ],
+      "found_by": null,
+      "deleted": null,
+      "id": 1095006,
+      "references": "- https://nvd.nist.gov/vuln/detail/CVE-2022-1650\n- https://github.com/eventsource/eventsource/commit/10ee0c4881a6ba2fe65ec18ed195ac35889583c4\n- https://huntr.dev/bounties/dc9e467f-be5d-4945-867d-1044d27e9b8e\n- https://github.com/EventSource/eventsource/pull/273#issuecomment-1127624508\n- https://github.com/EventSource/eventsource/commit/f9f6416567bff62c1af2f4314be51d9870e94bc2\n- https://lists.debian.org/debian-lts-announce/2022/12/msg00021.html\n- https://github.com/advisories/GHSA-6h5x-7c5m-7cr7",
+      "created": "2022-05-13T00:01:12.000Z",
+      "reported_by": null,
+      "title": "Exposure of Sensitive Information in eventsource",
+      "npm_advisory_id": null,
+      "overview": "When fetching an url with a link to an external site (Redirect), the users Cookies & Autorisation headers are leaked to the third party application. According to the same-origin-policy, the header should be \"sanitized.\"",
+      "url": "https://github.com/advisories/GHSA-6h5x-7c5m-7cr7"
+    },
+    "1095073": {
+      "findings": [
+        {
+          "version": "2.6.6",
+          "paths": [
+            "probot>@octokit/core>@octokit/request>node-fetch",
+            "probot>@octokit/core>@octokit/graphql>@octokit/request>node-fetch",
+            "probot>octokit-auth-probot>@octokit/auth-app>@octokit/auth-oauth-user>@octokit/request>node-fetch",
+            "probot>octokit-auth-probot>@octokit/auth-app>@octokit/auth-oauth-user>@octokit/oauth-methods>@octokit/request>node-fetch",
+            "probot>octokit-auth-probot>@octokit/auth-app>@octokit/auth-oauth-app>@octokit/auth-oauth-device>@octokit/oauth-methods>@octokit/request>node-fetch",
+            "probot>octokit-auth-probot>@octokit/auth-app>@octokit/auth-oauth-app>@octokit/auth-oauth-user>@octokit/auth-oauth-device>@octokit/oauth-methods>@octokit/request>node-fetch"
+          ]
+        }
+      ],
+      "metadata": null,
+      "vulnerable_versions": "<2.6.7",
+      "module_name": "node-fetch",
+      "severity": "high",
+      "github_advisory_id": "GHSA-r683-j2x4-v87g",
+      "cves": [
+        "CVE-2022-0235"
+      ],
+      "access": "public",
+      "patched_versions": ">=2.6.7",
+      "cvss": {
+        "score": 8.8,
+        "vectorString": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "updated": "2023-11-29T22:08:39.000Z",
+      "recommendation": "Upgrade to version 2.6.7 or later",
+      "cwe": [
+        "CWE-173",
+        "CWE-200",
+        "CWE-601"
+      ],
+      "found_by": null,
+      "deleted": null,
+      "id": 1095073,
+      "references": "- https://nvd.nist.gov/vuln/detail/CVE-2022-0235\n- https://github.com/node-fetch/node-fetch/commit/36e47e8a6406185921e4985dcbeff140d73eaa10\n- https://huntr.dev/bounties/d26ab655-38d6-48b3-be15-f9ad6b6ae6f7\n- https://github.com/node-fetch/node-fetch/pull/1453\n- https://github.com/node-fetch/node-fetch/commit/5c32f002fdd65b1c6a8f1e3620210813d45c7e60\n- https://cert-portal.siemens.com/productcert/pdf/ssa-637483.pdf\n- https://lists.debian.org/debian-lts-announce/2022/12/msg00007.html\n- https://github.com/node-fetch/node-fetch/pull/1449/commits/5c32f002fdd65b1c6a8f1e3620210813d45c7e60\n- https://github.com/node-fetch/node-fetch/commit/1ef4b560a17e644a02a3bfdea7631ffeee578b35\n- https://github.com/advisories/GHSA-r683-j2x4-v87g",
+      "created": "2022-01-21T23:55:52.000Z",
+      "reported_by": null,
+      "title": "node-fetch forwards secure headers to untrusted sites",
+      "npm_advisory_id": null,
+      "overview": "node-fetch forwards secure headers such as `authorization`, `www-authenticate`, `cookie`, & `cookie2` when redirecting to a untrusted site.",
+      "url": "https://github.com/advisories/GHSA-r683-j2x4-v87g"
+    },
+    "1095095": {
+      "findings": [
+        {
+          "version": "1.5.3",
+          "paths": [
+            "probot>eventsource>original>url-parse"
+          ]
+        }
+      ],
+      "metadata": null,
+      "vulnerable_versions": "<1.5.8",
+      "module_name": "url-parse",
+      "severity": "critical",
+      "github_advisory_id": "GHSA-hgjh-723h-mx2j",
+      "cves": [
+        "CVE-2022-0686"
+      ],
+      "access": "public",
+      "patched_versions": ">=1.5.8",
+      "cvss": {
+        "score": 9.1,
+        "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N"
+      },
+      "updated": "2023-11-29T22:39:50.000Z",
+      "recommendation": "Upgrade to version 1.5.8 or later",
+      "cwe": [
+        "CWE-639"
+      ],
+      "found_by": null,
+      "deleted": null,
+      "id": 1095095,
+      "references": "- https://nvd.nist.gov/vuln/detail/CVE-2022-0686\n- https://github.com/unshiftio/url-parse/commit/d5c64791ef496ca5459ae7f2176a31ea53b127e5\n- https://huntr.dev/bounties/55fd06cd-9054-4d80-83be-eb5a454be78c\n- https://security.netapp.com/advisory/ntap-20220325-0006/\n- https://lists.debian.org/debian-lts-announce/2023/02/msg00030.html\n- https://github.com/advisories/GHSA-hgjh-723h-mx2j",
+      "created": "2022-02-21T00:00:21.000Z",
+      "reported_by": null,
+      "title": "Authorization Bypass Through User-Controlled Key in url-parse",
+      "npm_advisory_id": null,
+      "overview": "url-parse prior to version 1.5.8 is vulnerable to Authorization Bypass Through User-Controlled Key.",
+      "url": "https://github.com/advisories/GHSA-hgjh-723h-mx2j"
+    },
+    "1095251": {
+      "findings": [
+        {
+          "version": "11.4.1",
+          "paths": [
+            "probot"
+          ]
+        }
+      ],
+      "metadata": null,
+      "vulnerable_versions": "<12.3.3",
+      "module_name": "probot",
+      "severity": "high",
+      "github_advisory_id": "GHSA-pwfr-8pq7-x9qv",
+      "cves": [
+        "CVE-2023-50728"
+      ],
+      "access": "public",
+      "patched_versions": ">=12.3.3",
+      "cvss": {
+        "score": 8.2,
+        "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:H"
+      },
+      "updated": "2023-12-16T00:52:21.000Z",
+      "recommendation": "Upgrade to version 12.3.3 or later",
+      "cwe": [
+        "CWE-755"
+      ],
+      "found_by": null,
+      "deleted": null,
+      "id": 1095251,
+      "references": "- https://github.com/octokit/webhooks.js/security/advisories/GHSA-pwfr-8pq7-x9qv\n- https://nvd.nist.gov/vuln/detail/CVE-2023-50728\n- https://github.com/octokit/app.js/releases/tag/v14.0.2\n- https://github.com/octokit/octokit.js/releases/tag/v3.1.2\n- https://github.com/octokit/webhooks.js/releases/tag/v10.9.2\n- https://github.com/octokit/webhooks.js/releases/tag/v11.1.2\n- https://github.com/octokit/webhooks.js/releases/tag/v12.0.4\n- https://github.com/octokit/webhooks.js/releases/tag/v9.26.3\n- https://github.com/probot/probot/releases/tag/v12.3.3\n- https://github.com/advisories/GHSA-pwfr-8pq7-x9qv",
+      "created": "2023-12-16T00:52:19.000Z",
+      "reported_by": null,
+      "title": "Unauthenticated Denial of Service in the octokit/webhooks library",
+      "npm_advisory_id": null,
+      "overview": "### Impact\nVersions [v9.26.0](https://github.com/octokit/webhooks.js/releases/tag/v9.26.0), [v10.9.x](https://github.com/octokit/webhooks.js/releases/tag/v10.9.1)), [v11.1.x](https://github.com/octokit/webhooks.js/releases/tag/v11.1.1), [v12.0.x](https://github.com/octokit/webhooks.js/releases/tag/v12.0.3) all contained the code that would throw the error.\n\nSpecifically, during a pentest we encountered a bug in the octokit/webhooks library (a dependency of Probot, a framework for building Github Apps). The resulting request was found to cause an uncaught exception that ends the nodejs process.\n\nThe problem is caused by an issue with error handling in the @octokit/webhooks library because the error can be undefined in some cases.\n\nCredit goes to @pb82 (for the early analysis) and @rh-tguittet (for discovery). \n\n### Patches\n\nMaintenance releases for the Error being thrown by the verify method in [octokit/webhooks.js](https://github.com/octokit/webhooks.js)\n* v12 - [v12.0.4](https://github.com/octokit/webhooks.js/releases/tag/v12.0.4)\n* v11 - [v11.1.2](https://github.com/octokit/webhooks.js/releases/tag/v11.1.2)\n* v10 -[v10.9.2](https://github.com/octokit/webhooks.js/releases/tag/v10.9.2)\n* v9 - [v9.26.3](https://github.com/octokit/webhooks.js/releases/tag/v9.26.3)\n\nMaintenance release for the reference for [octokit/webhooks.js](https://github.com/octokit/webhooks.js) in [app.js](https://github.com/octokit/app.js)\n* [v14.0.2](https://github.com/octokit/app.js/releases/tag/v14.0.2)\n\nMaintenance release for the reference for [octokit/webhooks.js](https://github.com/octokit/webhooks.js) in [octokit.js](https://github.com/octokit/octokit.js)\n* [v3.1.2](https://github.com/octokit/octokit.js/releases/tag/v3.1.2)\n\nMaintenance release for the reference for [octokit/webhooks.js](https://github.com/octokit/webhooks.js) in [Protobot](https://github.com/probot/probot)\n* [v12.3.3](https://github.com/probot/probot/releases/tag/v12.3.3)\n\n\n### Workarounds\nIt is recommend that all users upgrade to the latest version of  [octokit/webhooks.js](https://github.com/octokit/webhooks.js) or use one of the updated back ported versions.\n\n",
+      "url": "https://github.com/advisories/GHSA-pwfr-8pq7-x9qv"
+    },
+    "1095257": {
+      "findings": [
+        {
+          "version": "7.21.0",
+          "paths": [
+            "probot>@octokit/webhooks"
+          ]
+        }
+      ],
+      "metadata": null,
+      "vulnerable_versions": "<9.26.3",
+      "module_name": "@octokit/webhooks",
+      "severity": "high",
+      "github_advisory_id": "GHSA-pwfr-8pq7-x9qv",
+      "cves": [
+        "CVE-2023-50728"
+      ],
+      "access": "public",
+      "patched_versions": ">=9.26.3",
+      "cvss": {
+        "score": 8.2,
+        "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:H"
+      },
+      "updated": "2023-12-16T00:52:21.000Z",
+      "recommendation": "Upgrade to version 9.26.3 or later",
+      "cwe": [
+        "CWE-755"
+      ],
+      "found_by": null,
+      "deleted": null,
+      "id": 1095257,
+      "references": "- https://github.com/octokit/webhooks.js/security/advisories/GHSA-pwfr-8pq7-x9qv\n- https://nvd.nist.gov/vuln/detail/CVE-2023-50728\n- https://github.com/octokit/app.js/releases/tag/v14.0.2\n- https://github.com/octokit/octokit.js/releases/tag/v3.1.2\n- https://github.com/octokit/webhooks.js/releases/tag/v10.9.2\n- https://github.com/octokit/webhooks.js/releases/tag/v11.1.2\n- https://github.com/octokit/webhooks.js/releases/tag/v12.0.4\n- https://github.com/octokit/webhooks.js/releases/tag/v9.26.3\n- https://github.com/probot/probot/releases/tag/v12.3.3\n- https://github.com/advisories/GHSA-pwfr-8pq7-x9qv",
+      "created": "2023-12-16T00:52:19.000Z",
+      "reported_by": null,
+      "title": "Unauthenticated Denial of Service in the octokit/webhooks library",
+      "npm_advisory_id": null,
+      "overview": "### Impact\nVersions [v9.26.0](https://github.com/octokit/webhooks.js/releases/tag/v9.26.0), [v10.9.x](https://github.com/octokit/webhooks.js/releases/tag/v10.9.1)), [v11.1.x](https://github.com/octokit/webhooks.js/releases/tag/v11.1.1), [v12.0.x](https://github.com/octokit/webhooks.js/releases/tag/v12.0.3) all contained the code that would throw the error.\n\nSpecifically, during a pentest we encountered a bug in the octokit/webhooks library (a dependency of Probot, a framework for building Github Apps). The resulting request was found to cause an uncaught exception that ends the nodejs process.\n\nThe problem is caused by an issue with error handling in the @octokit/webhooks library because the error can be undefined in some cases.\n\nCredit goes to @pb82 (for the early analysis) and @rh-tguittet (for discovery). \n\n### Patches\n\nMaintenance releases for the Error being thrown by the verify method in [octokit/webhooks.js](https://github.com/octokit/webhooks.js)\n* v12 - [v12.0.4](https://github.com/octokit/webhooks.js/releases/tag/v12.0.4)\n* v11 - [v11.1.2](https://github.com/octokit/webhooks.js/releases/tag/v11.1.2)\n* v10 -[v10.9.2](https://github.com/octokit/webhooks.js/releases/tag/v10.9.2)\n* v9 - [v9.26.3](https://github.com/octokit/webhooks.js/releases/tag/v9.26.3)\n\nMaintenance release for the reference for [octokit/webhooks.js](https://github.com/octokit/webhooks.js) in [app.js](https://github.com/octokit/app.js)\n* [v14.0.2](https://github.com/octokit/app.js/releases/tag/v14.0.2)\n\nMaintenance release for the reference for [octokit/webhooks.js](https://github.com/octokit/webhooks.js) in [octokit.js](https://github.com/octokit/octokit.js)\n* [v3.1.2](https://github.com/octokit/octokit.js/releases/tag/v3.1.2)\n\nMaintenance release for the reference for [octokit/webhooks.js](https://github.com/octokit/webhooks.js) in [Protobot](https://github.com/probot/probot)\n* [v12.3.3](https://github.com/probot/probot/releases/tag/v12.3.3)\n\n\n### Workarounds\nIt is recommend that all users upgrade to the latest version of  [octokit/webhooks.js](https://github.com/octokit/webhooks.js) or use one of the updated back ported versions.\n\n",
+      "url": "https://github.com/advisories/GHSA-pwfr-8pq7-x9qv"
+    },
+    "1096472": {
+      "findings": [
+        {
+          "version": "6.7.0",
+          "paths": [
+            "probot>express>qs",
+            "probot>express>body-parser>qs"
+          ]
+        }
+      ],
+      "metadata": null,
+      "vulnerable_versions": ">=6.7.0 <6.7.3",
+      "module_name": "qs",
+      "severity": "high",
+      "github_advisory_id": "GHSA-hrpp-h998-j3pp",
+      "cves": [
+        "CVE-2022-24999"
+      ],
+      "access": "public",
+      "patched_versions": ">=6.7.3",
+      "cvss": {
+        "score": 7.5,
+        "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+      },
+      "updated": "2024-02-13T20:35:50.000Z",
+      "recommendation": "Upgrade to version 6.7.3 or later",
+      "cwe": [
+        "CWE-1321"
+      ],
+      "found_by": null,
+      "deleted": null,
+      "id": 1096472,
+      "references": "- https://nvd.nist.gov/vuln/detail/CVE-2022-24999\n- https://github.com/ljharb/qs/pull/428\n- https://github.com/n8tz/CVE-2022-24999\n- https://github.com/ljharb/qs/commit/4310742efbd8c03f6495f07906b45213da0a32ec\n- https://github.com/ljharb/qs/commit/727ef5d34605108acb3513f72d5435972ed15b68\n- https://github.com/ljharb/qs/commit/73205259936317b40f447c5cdb71c5b341848e1b\n- https://github.com/ljharb/qs/commit/8b4cc14cda94a5c89341b77e5fe435ec6c41be2d\n- https://github.com/ljharb/qs/commit/ba24e74dd17931f825adb52f5633e48293b584e1\n- https://github.com/ljharb/qs/commit/e799ba57e573a30c14b67c1889c7c04d508b9105\n- https://github.com/ljharb/qs/commit/ed0f5dcbef4b168a8ae299d78b1e4a2e9b1baf1f\n- https://github.com/ljharb/qs/commit/f945393cfe442fe8c6e62b4156fd35452c0686ee\n- https://github.com/ljharb/qs/commit/fc3682776670524a42e19709ec4a8138d0d7afda\n- https://github.com/expressjs/express/releases/tag/4.17.3\n- https://lists.debian.org/debian-lts-announce/2023/01/msg00039.html\n- https://github.com/advisories/GHSA-hrpp-h998-j3pp",
+      "created": "2022-11-27T00:30:50.000Z",
+      "reported_by": null,
+      "title": "qs vulnerable to Prototype Pollution",
+      "npm_advisory_id": null,
+      "overview": "qs before 6.10.3 allows attackers to cause a Node process hang because an `__ proto__` key can be used. In many typical web framework use cases, an unauthenticated remote attacker can place the attack payload in the query string of the URL that is used to visit the application, such as `a[__proto__]=b&a[__proto__]&a[length]=100000000`. The fix was backported to qs 6.9.7, 6.8.3, 6.7.3, 6.6.1, 6.5.3, 6.4.1, 6.3.3, and 6.2.4.",
+      "url": "https://github.com/advisories/GHSA-hrpp-h998-j3pp"
+    },
+    "1096482": {
+      "findings": [
+        {
+          "version": "7.3.5",
+          "paths": [
+            "probot>semver"
+          ]
+        },
+        {
+          "version": "7.3.5",
+          "paths": [
+            "probot>update-notifier>semver"
+          ]
+        }
+      ],
+      "metadata": null,
+      "vulnerable_versions": ">=7.0.0 <7.5.2",
+      "module_name": "semver",
+      "severity": "moderate",
+      "github_advisory_id": "GHSA-c2qf-rxjj-qqgw",
+      "cves": [
+        "CVE-2022-25883"
+      ],
+      "access": "public",
+      "patched_versions": ">=7.5.2",
+      "cvss": {
+        "score": 5.3,
+        "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+      },
+      "updated": "2024-02-14T14:58:49.000Z",
+      "recommendation": "Upgrade to version 7.5.2 or later",
+      "cwe": [
+        "CWE-1333"
+      ],
+      "found_by": null,
+      "deleted": null,
+      "id": 1096482,
+      "references": "- https://nvd.nist.gov/vuln/detail/CVE-2022-25883\n- https://github.com/npm/node-semver/pull/564\n- https://github.com/npm/node-semver/commit/717534ee353682f3bcf33e60a8af4292626d4441\n- https://security.snyk.io/vuln/SNYK-JS-SEMVER-3247795\n- https://github.com/npm/node-semver/blob/main/classes/range.js#L97-L104\n- https://github.com/npm/node-semver/blob/main/internal/re.js#L138\n- https://github.com/npm/node-semver/blob/main/internal/re.js#L160\n- https://github.com/npm/node-semver/pull/585\n- https://github.com/npm/node-semver/commit/928e56d21150da0413a3333a3148b20e741a920c\n- https://github.com/npm/node-semver/pull/593\n- https://github.com/npm/node-semver/commit/2f8fd41487acf380194579ecb6f8b1bbfe116be0\n- https://github.com/advisories/GHSA-c2qf-rxjj-qqgw",
+      "created": "2023-06-21T06:30:28.000Z",
+      "reported_by": null,
+      "title": "semver vulnerable to Regular Expression Denial of Service",
+      "npm_advisory_id": null,
+      "overview": "Versions of the package semver before 7.5.2 on the 7.x branch, before 6.3.1 on the 6.x branch, and all other versions before 5.7.2 are vulnerable to Regular Expression Denial of Service (ReDoS) via the function new Range, when untrusted user data is provided as a range.",
+      "url": "https://github.com/advisories/GHSA-c2qf-rxjj-qqgw"
+    },
+    "1096483": {
+      "findings": [
+        {
+          "version": "5.7.1",
+          "paths": [
+            "probot>octokit-auth-probot>@octokit/auth-app>universal-github-app-jwt>jsonwebtoken>semver"
+          ]
+        }
+      ],
+      "metadata": null,
+      "vulnerable_versions": "<5.7.2",
+      "module_name": "semver",
+      "severity": "moderate",
+      "github_advisory_id": "GHSA-c2qf-rxjj-qqgw",
+      "cves": [
+        "CVE-2022-25883"
+      ],
+      "access": "public",
+      "patched_versions": ">=5.7.2",
+      "cvss": {
+        "score": 5.3,
+        "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+      },
+      "updated": "2024-02-14T14:58:49.000Z",
+      "recommendation": "Upgrade to version 5.7.2 or later",
+      "cwe": [
+        "CWE-1333"
+      ],
+      "found_by": null,
+      "deleted": null,
+      "id": 1096483,
+      "references": "- https://nvd.nist.gov/vuln/detail/CVE-2022-25883\n- https://github.com/npm/node-semver/pull/564\n- https://github.com/npm/node-semver/commit/717534ee353682f3bcf33e60a8af4292626d4441\n- https://security.snyk.io/vuln/SNYK-JS-SEMVER-3247795\n- https://github.com/npm/node-semver/blob/main/classes/range.js#L97-L104\n- https://github.com/npm/node-semver/blob/main/internal/re.js#L138\n- https://github.com/npm/node-semver/blob/main/internal/re.js#L160\n- https://github.com/npm/node-semver/pull/585\n- https://github.com/npm/node-semver/commit/928e56d21150da0413a3333a3148b20e741a920c\n- https://github.com/npm/node-semver/pull/593\n- https://github.com/npm/node-semver/commit/2f8fd41487acf380194579ecb6f8b1bbfe116be0\n- https://github.com/advisories/GHSA-c2qf-rxjj-qqgw",
+      "created": "2023-06-21T06:30:28.000Z",
+      "reported_by": null,
+      "title": "semver vulnerable to Regular Expression Denial of Service",
+      "npm_advisory_id": null,
+      "overview": "Versions of the package semver before 7.5.2 on the 7.x branch, before 6.3.1 on the 6.x branch, and all other versions before 5.7.2 are vulnerable to Regular Expression Denial of Service (ReDoS) via the function new Range, when untrusted user data is provided as a range.",
+      "url": "https://github.com/advisories/GHSA-c2qf-rxjj-qqgw"
+    },
+    "1096484": {
+      "findings": [
+        {
+          "version": "6.3.0",
+          "paths": [
+            "probot>update-notifier>semver-diff>semver",
+            "probot>update-notifier>configstore>make-dir>semver"
+          ]
+        }
+      ],
+      "metadata": null,
+      "vulnerable_versions": ">=6.0.0 <6.3.1",
+      "module_name": "semver",
+      "severity": "moderate",
+      "github_advisory_id": "GHSA-c2qf-rxjj-qqgw",
+      "cves": [
+        "CVE-2022-25883"
+      ],
+      "access": "public",
+      "patched_versions": ">=6.3.1",
+      "cvss": {
+        "score": 5.3,
+        "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+      },
+      "updated": "2024-02-14T14:58:49.000Z",
+      "recommendation": "Upgrade to version 6.3.1 or later",
+      "cwe": [
+        "CWE-1333"
+      ],
+      "found_by": null,
+      "deleted": null,
+      "id": 1096484,
+      "references": "- https://nvd.nist.gov/vuln/detail/CVE-2022-25883\n- https://github.com/npm/node-semver/pull/564\n- https://github.com/npm/node-semver/commit/717534ee353682f3bcf33e60a8af4292626d4441\n- https://security.snyk.io/vuln/SNYK-JS-SEMVER-3247795\n- https://github.com/npm/node-semver/blob/main/classes/range.js#L97-L104\n- https://github.com/npm/node-semver/blob/main/internal/re.js#L138\n- https://github.com/npm/node-semver/blob/main/internal/re.js#L160\n- https://github.com/npm/node-semver/pull/585\n- https://github.com/npm/node-semver/commit/928e56d21150da0413a3333a3148b20e741a920c\n- https://github.com/npm/node-semver/pull/593\n- https://github.com/npm/node-semver/commit/2f8fd41487acf380194579ecb6f8b1bbfe116be0\n- https://github.com/advisories/GHSA-c2qf-rxjj-qqgw",
+      "created": "2023-06-21T06:30:28.000Z",
+      "reported_by": null,
+      "title": "semver vulnerable to Regular Expression Denial of Service",
+      "npm_advisory_id": null,
+      "overview": "Versions of the package semver before 7.5.2 on the 7.x branch, before 6.3.1 on the 6.x branch, and all other versions before 5.7.2 are vulnerable to Regular Expression Denial of Service (ReDoS) via the function new Range, when untrusted user data is provided as a range.",
+      "url": "https://github.com/advisories/GHSA-c2qf-rxjj-qqgw"
+    },
+    "1096549": {
+      "findings": [
+        {
+          "version": "1.2.5",
+          "paths": [
+            "probot>hbs>handlebars>minimist",
+            "probot>update-notifier>latest-version>package-json>registry-auth-token>rc>minimist"
+          ]
+        }
+      ],
+      "metadata": null,
+      "vulnerable_versions": ">=1.0.0 <1.2.6",
+      "module_name": "minimist",
+      "severity": "critical",
+      "github_advisory_id": "GHSA-xvch-5gv4-984h",
+      "cves": [
+        "CVE-2021-44906"
+      ],
+      "access": "public",
+      "patched_versions": ">=1.2.6",
+      "cvss": {
+        "score": 9.8,
+        "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "updated": "2024-02-23T05:08:06.000Z",
+      "recommendation": "Upgrade to version 1.2.6 or later",
+      "cwe": [
+        "CWE-1321"
+      ],
+      "found_by": null,
+      "deleted": null,
+      "id": 1096549,
+      "references": "- https://nvd.nist.gov/vuln/detail/CVE-2021-44906\n- https://github.com/substack/minimist/issues/164\n- https://github.com/substack/minimist/blob/master/index.js#L69\n- https://snyk.io/vuln/SNYK-JS-MINIMIST-559764\n- https://stackoverflow.com/questions/8588563/adding-custom-properties-to-a-function/20278068#20278068\n- https://github.com/Marynk/JavaScript-vulnerability-detection/blob/main/minimist%20PoC.zip\n- https://github.com/minimistjs/minimist/issues/11\n- https://github.com/minimistjs/minimist/pull/24\n- https://github.com/minimistjs/minimist/commit/34e20b8461118608703d6485326abbb8e35e1703\n- https://github.com/minimistjs/minimist/commit/bc8ecee43875261f4f17eb20b1243d3ed15e70eb\n- https://github.com/minimistjs/minimist/commit/c2b981977fa834b223b408cfb860f933c9811e4d\n- https://github.com/minimistjs/minimist/commit/ef9153fc52b6cea0744b2239921c5dcae4697f11\n- https://github.com/minimistjs/minimist/commits/v0.2.4\n- https://github.com/advisories/GHSA-xvch-5gv4-984h",
+      "created": "2022-03-18T00:01:09.000Z",
+      "reported_by": null,
+      "title": "Prototype Pollution in minimist",
+      "npm_advisory_id": null,
+      "overview": "Minimist prior to 1.2.6 and 0.2.4 is vulnerable to Prototype Pollution via file `index.js`, function `setKey()` (lines 69-95).",
+      "url": "https://github.com/advisories/GHSA-xvch-5gv4-984h"
+    },
+    "1096820": {
+      "findings": [
+        {
+          "version": "4.17.1",
+          "paths": [
+            "probot>express"
+          ]
+        }
+      ],
+      "metadata": null,
+      "vulnerable_versions": "<4.19.2",
+      "module_name": "express",
+      "severity": "moderate",
+      "github_advisory_id": "GHSA-rv95-896h-c2vc",
+      "cves": [
+        "CVE-2024-29041"
+      ],
+      "access": "public",
+      "patched_versions": ">=4.19.2",
+      "cvss": {
+        "score": 6.1,
+        "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+      },
+      "updated": "2024-03-27T21:47:29.000Z",
+      "recommendation": "Upgrade to version 4.19.2 or later",
+      "cwe": [
+        "CWE-601",
+        "CWE-1286"
+      ],
+      "found_by": null,
+      "deleted": null,
+      "id": 1096820,
+      "references": "- https://github.com/expressjs/express/security/advisories/GHSA-rv95-896h-c2vc\n- https://github.com/koajs/koa/issues/1800\n- https://github.com/expressjs/express/pull/5539\n- https://github.com/expressjs/express/commit/0867302ddbde0e9463d0564fea5861feb708c2dd\n- https://github.com/expressjs/express/commit/0b746953c4bd8e377123527db11f9cd866e39f94\n- https://expressjs.com/en/4x/api.html#res.location\n- https://nvd.nist.gov/vuln/detail/CVE-2024-29041\n- https://github.com/advisories/GHSA-rv95-896h-c2vc",
+      "created": "2024-03-25T19:40:26.000Z",
+      "reported_by": null,
+      "title": "Express.js Open Redirect in malformed URLs",
+      "npm_advisory_id": null,
+      "overview": "### Impact\n\nVersions of Express.js prior to 4.19.2 and pre-release alpha and beta versions before 5.0.0-beta.3 are affected by an open redirect vulnerability using malformed URLs.\n\nWhen a user of Express performs a redirect using a user-provided URL Express performs an encode [using `encodeurl`](https://github.com/pillarjs/encodeurl) on the contents before passing it to the `location` header. This can cause malformed URLs to be evaluated in unexpected ways by common redirect allow list implementations in Express applications, leading to an Open Redirect via bypass of a properly implemented allow list.\n\nThe main method impacted is `res.location()` but this is also called from within `res.redirect()`.\n\n### Patches\n\nhttps://github.com/expressjs/express/commit/0867302ddbde0e9463d0564fea5861feb708c2dd\nhttps://github.com/expressjs/express/commit/0b746953c4bd8e377123527db11f9cd866e39f94\n\nAn initial fix went out with `express@4.19.0`, we then patched a feature regression in `4.19.1` and added improved handling for the bypass in `4.19.2`.\n\n### Workarounds\n\nThe fix for this involves pre-parsing the url string with either `require('node:url').parse` or `new URL`. These are steps you can take on your own before passing the user input string to `res.location` or `res.redirect`.\n\n### References\n\nhttps://github.com/expressjs/express/pull/5539\nhttps://github.com/koajs/koa/issues/1800\nhttps://expressjs.com/en/4x/api.html#res.location",
+      "url": "https://github.com/advisories/GHSA-rv95-896h-c2vc"
+    }
+  },
+  "muted": [],
+  "metadata": {
+    "vulnerabilities": {
+      "info": 0,
+      "low": 0,
+      "moderate": 13,
+      "high": 11,
+      "critical": 4
+    },
+    "dependencies": 329,
+    "devDependencies": 0,
+    "optionalDependencies": 1,
+    "totalDependencies": 330
+  },
+  "runId": "8bd27978-4594-4e06-a195-a9e0bd5156ec"
+}
