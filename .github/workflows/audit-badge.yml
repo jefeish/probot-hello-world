@@ -57,22 +57,16 @@ jobs:
       - name: Prepend badge content to README.md
         run: |
           # Define the pattern to search for
-          pattern='\!\[npm audit\].*'
-          pwd
-          ls -la
-          cat README.md
-          
-          # Check if README.md exists in the current directory
-          if [ -f "README.md" ]; then
-            # Use sed to delete lines matching the pattern in README.md
-            sed -i '' "s/${pattern}/DELETEME/g" README.md
-            
-            # remove the empty lines at the beginning of the file
-            sed -i '' '/^DELETEME$/d' README.md
-          else
-            echo "README.md not found in the current directory."
-          fi
+          pattern='\!\[npm audit\]'
 
+          # Create a temporary file to store modified content
+          tmp_file=$(mktemp)
+
+          # Use grep to filter out lines not matching the pattern and write to the temporary file
+          grep -v "^${pattern}" README.md > "$tmp_file"
+
+          # Overwrite README.md with content from the temporary file
+          mv "$tmp_file" README.md
 
           badge_content=$(cat audit-badge.md)
           readme_content=$(cat README.md)
