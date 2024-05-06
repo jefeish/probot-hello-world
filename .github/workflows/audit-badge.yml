@@ -60,11 +60,12 @@ jobs:
           pattern="\!\[npm audit\].*"
           pwd
           ls -la
+          cat README.md
           # Use sed to delete lines matching the pattern in README.md
-          sed -i '' "s/${pattern}/DELETEME/g" /README.md
+          sed -i '' "s/${pattern}/DELETEME/g" README.md
           
           # remove the empty lines at the beginning of the file
-          sed -i '' '/^DELETEME$/d' /README.md
+          sed -i '' '/^DELETEME$/d' README.md
 
           badge_content=$(cat audit-badge.md)
           readme_content=$(cat README.md)
