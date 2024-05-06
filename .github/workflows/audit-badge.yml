@@ -59,6 +59,7 @@ jobs:
           # Define the pattern to search for
           pattern="\!\[npm audit\].*"
           pwd
+          ls -la
           # Use sed to delete lines matching the pattern in README.md
           sed -i '' "s/${pattern}/DELETEME/g" /README.md
           
