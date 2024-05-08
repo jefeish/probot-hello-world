@@ -1,9 +1,10 @@
 name: Create Release and Upload Zip
 
 on:
-  push:
-    tags:
-      - "v*.*.*"
+  workflow_dispatch
+  # push:
+  #   tags:
+  #     - "v*.*.*"
 
 jobs:
   create_release:
