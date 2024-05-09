@@ -1,52 +1,55 @@
-name: Publish Release
+name: Release Workflow
 
 on:
-  create:
-    tags:
-      - '*'
   workflow_dispatch:
-    
+
 jobs:
-  publish_release:
+  release:
     runs-on: ubuntu-latest
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      GH_TOKEN: ${{ secrets.PUBLISH_TOKEN }}
-                
+      PUBLISH_TARGET: jefeish/test22
+      
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v2
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
+      - name: Get latest tag
+        id: get_tag
+        run: echo ::set-output name=TAG::$(git describe --tags $(git rev-list --tags --max-count=1))
+
+      - name: Calculate next version
+        id: next_version
+        run: echo ::set-output name=NEW_TAG::v$(echo "${{ steps.get_tag.outputs.TAG }}" | cut -d. -f1).$(echo "${{ steps.get_tag.outputs.TAG }}" | cut -d. -f2).$(( $(echo "${{ steps.get_tag.outputs.TAG }}" | cut -d. -f3) + 1))
+
+      - name: Create tag
+        run: git tag ${{ steps.next_version.outputs.NEW_TAG }}
+
+      - name: Push tag
+        run: git push origin ${{ steps.next_version.outputs.NEW_TAG }}
+
+      - name: Create release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          node-version: '14'
+          tag_name: ${{ steps.next_version.outputs.NEW_TAG }}
+          release_name: Release ${{ steps.next_version.outputs.NEW_TAG }}
+          draft: false
+          prerelease: false
 
-      - name: Install dependencies
-        run: npm install
+      - name: Upload release asset
+        id: upload-release-asset
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: <your_asset_path>
+          asset_name: <your_asset_name>
+          asset_content_type: <your_asset_content_type>
 
-      - name: Publish release
+      - name: Upload release asset to another Repo
         run: |
-          VERSION=$(echo "${{ github.ref }}" | sed -e 's/refs\/tags\///')
-          echo "Creating release with version $VERSION"
-          # npm run release -- $VERSION
-          gh release create $VERSION --title "Release $VERSION" --notes "Release $VERSION"
-            
-      - name: Download release
-        run: |
-          # get repo name without owner
-          REPO=$(echo "${{ github.repository }}" | sed -e 's/.*\///')
-
-          # Download source code from release assets for this release version
-          echo "Downloading release file ${REPO}-${VERSION}.tar.gz"
-          gh api -H "Accept: application/vnd.github.raw" repos/${{ github.repository }}/tarball/${VERSION} > ${REPO}-${VERSION}.tar.gz
-
-      - name: Create target release
-        run: |
-          # Publish new release on downstream repository and attach release source code as release asset
-          echo "Publishing release on downstream repository"
-          gh release create $VERSION --title "${REPO} Release $VERSION" --repo "${{ var.PUBLISH_TARGET }}" --notes "Release $VERSION"
-
-      - name: Upload release
-        run: |
-          gh release upload --repo "${{ var.PUBLISH_TARGET }}" ${VERSION} ${REPO}-${VERSION}.tar.gz
+          gh release upload ${{ env.PUBLISH_TARGET }} ${{ steps.create_release.outputs.upload_url }}:<your_asset_name> --clobber
