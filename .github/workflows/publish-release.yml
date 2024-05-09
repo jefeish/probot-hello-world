@@ -16,7 +16,9 @@ jobs:
 
       - name: Get latest tag
         id: get_tag
-        run: echo ::set-output name=TAG::$(git describe --tags $(git rev-list --tags --max-count=1))
+        run: |
+          echo "CURRENT_TAG: $(git describe --tags $(git rev-list --tags --max-count=1))"
+          echo ::set-output name=TAG::$(git describe --tags $(git rev-list --tags --max-count=1))
 
       - name: Calculate next version
         id: next_version
