@@ -1,52 +1,52 @@
 name: Publish Release
 
 on:
-    create:
-        tags:
-          - '*'
-    workflow_dispatch:
+  create:
+    tags:
+      - '*'
+  workflow_dispatch:
     
 jobs:
-    publish_release:
-        runs-on: ubuntu-latest
-        env:
-            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-            GH_TOKEN: ${{ secrets.PUBLISH_TOKEN }}
+  publish_release:
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      GH_TOKEN: ${{ secrets.PUBLISH_TOKEN }}
                 
-        steps:
-            - name: Checkout code
-              uses: actions/checkout@v4
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-            - name: Set up Node.js
-              uses: actions/setup-node@v4
-              with:
-                    node-version: '20'
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
 
-            - name: Install dependencies
-              run: npm install
+      - name: Install dependencies
+        run: npm install
 
-            - name: Publish release
-              run: |
-                    VERSION=$(echo "${{ github.ref }}" | sed -e 's/refs\/tags\///')
-                    echo "Creating release with version $VERSION"
-                    # npm run release -- $VERSION
-                    gh release create $VERSION --title "Release $VERSION" --notes "Release $VERSION"
+      - name: Publish release
+        run: |
+          VERSION=$(echo "${{ github.ref }}" | sed -e 's/refs\/tags\///')
+          echo "Creating release with version $VERSION"
+          # npm run release -- $VERSION
+          gh release create $VERSION --title "Release $VERSION" --notes "Release $VERSION"
             
-            - name: Download release
-              run: |
-                    # get repo name without owner
-                    REPO=$(echo "${{ github.repository }}" | sed -e 's/.*\///')
+      - name: Download release
+        run: |
+          # get repo name without owner
+          REPO=$(echo "${{ github.repository }}" | sed -e 's/.*\///')
 
-                    # Download source code from release assets for this release version
-                    echo "Downloading release file ${REPO}-${VERSION}.tar.gz"
-                    gh api -H "Accept: application/vnd.github.raw" repos/${{ github.repository }}/tarball/${VERSION} > ${REPO}-${VERSION}.tar.gz
+          # Download source code from release assets for this release version
+          echo "Downloading release file ${REPO}-${VERSION}.tar.gz"
+          gh api -H "Accept: application/vnd.github.raw" repos/${{ github.repository }}/tarball/${VERSION} > ${REPO}-${VERSION}.tar.gz
 
-            - name: Create target release
-              run: |
-                    # Publish new release on downstream repository and attach release source code as release asset
-                    echo "Publishing release on downstream repository"
-                    gh release create $VERSION --title "${REPO} Release $VERSION" --repo "${{vars.PUBLISH_TARGET}}" --notes "Release $VERSION"
-   
-             - name: Upload release
-               run: |
-                    gh release upload --repo "${{vars.PUBLISH_TARGET}}" ${VERSION} ${REPO}-${VERSION}.tar.gz
+      - name: Create target release
+        run: |
+          # Publish new release on downstream repository and attach release source code as release asset
+          echo "Publishing release on downstream repository"
+          gh release create $VERSION --title "${REPO} Release $VERSION" --repo "${{ var.PUBLISH_TARGET }}" --notes "Release $VERSION"
+
+      - name: Upload release
+        run: |
+          gh release upload --repo "${{ var.PUBLISH_TARGET }}" ${VERSION} ${REPO}-${VERSION}.tar.gz
