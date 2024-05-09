@@ -9,7 +9,10 @@ on:
 jobs:
   create_release:
     runs-on: ubuntu-latest
-
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      GH_TOKEN: ${{ secrets.PUBLISH_TOKEN }}
+      
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
