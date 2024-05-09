@@ -5,3 +5,7 @@ npm-debug.log
 .env
 coverage
 lib
+
+**/*.gz
+**/*.tgz
+**/*.zip
