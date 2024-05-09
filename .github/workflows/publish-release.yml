@@ -19,6 +19,7 @@ jobs:
         run: |
           git show-ref
           git fetch --tags
+          git show-ref
           git describe --tags
           git rev-list --tags
           echo "CURRENT_TAG: $(git describe --tags $(git rev-list --tags --max-count=1))"
