@@ -16,12 +16,15 @@ jobs:
 
       - name: Get latest tag
         id: get_tag
-        run: echo ::set-output name=TAG::$(git describe --tags $(git rev-list --tags --max-count=1))
+        run: |
+          echo ::set-output name=TAG::$(git describe --tags $(git rev-list --tags --max-count=1))
+          echo "TAG value is ${{ steps.get_tag.outputs.TAG }}"
 
       - name: Calculate next version
         id: next_version
-        run: echo ::set-output name=NEW_TAG::v$(echo "${{ steps.get_tag.outputs.TAG }}" | cut -d. -f1).$(echo "${{ steps.get_tag.outputs.TAG }}" | cut -d. -f2).$(( $(echo "${{ steps.get_tag.outputs.TAG }}" | cut -d. -f3) + 1))
-
+        run: |
+          echo ::set-output name=NEW_TAG::v$(echo "${{ steps.get_tag.outputs.TAG }}" | cut -d. -f1).$(echo "${{ steps.get_tag.outputs.TAG }}" | cut -d. -f2).$(( $(echo "${{ steps.get_tag.outputs.TAG }}" | cut -d. -f3) + 1))
+          echo "NEW_TAG value is ${{ steps.get_tag.outputs.NEW_TAG }}"
       - name: Create tag
         run: git tag ${{ steps.next_version.outputs.NEW_TAG }}
 
