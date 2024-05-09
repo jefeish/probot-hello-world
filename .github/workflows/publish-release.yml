@@ -4,7 +4,8 @@ on:
     create:
         tags:
           - '*'
-
+    workflow_dispatch:
+    
 jobs:
     publish_release:
         runs-on: ubuntu-latest
