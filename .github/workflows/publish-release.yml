@@ -100,6 +100,7 @@ jobs:
       
           # Upload the .zip file as a release asset
           echo "Uploading release asset"
+          echo "PWD: pwd"
           ls ${ARTIFACT}-${TARGET_VERSION}.zip
           echo "zip-file: ${GITHUB_WORKSPACE}/${ARTIFACT}-${TARGET_VERSION}.zip"
           gh release upload "${{ env.PUBLISH_TARGET }}" ${TARGET_VERSION} ${GITHUB_WORKSPACE}/${ARTIFACT}-${TARGET_VERSION}.zip
