@@ -90,17 +90,18 @@ jobs:
 
       - name: Upload release asset to another Repo
         run: |
-          REPO=ghec-health-check-artifact
-          VERSION=${{ steps.next_version.outputs.NEW_TAG }}
-          echo "VERSION: $VERSION"
+          ARTIFACT=ghec-health-check-artifact
+          TARGET_VERSION=${{ steps.next_version.outputs.NEW_TAG }}
+          echo "TARGET_VERSION: $TARGET_VERSION"
 
           # Publish new release on downstream repository and attach release source code as release asset
           echo "Creating release on downstream repository"
-          gh release create ${VERSION} --title "${REPO} Release ${VERSION}" --repo "${{ env.PUBLISH_TARGET }}" --notes "Release ${VERSION}"
+          gh release create ${TARGET_VERSION} --title "${ARTIFACT} Release ${TARGET_VERSION}" --repo "${{ env.PUBLISH_TARGET }}" --notes "Release ${TARGET_VERSION}"
       
           # Upload the .zip file as a release asset
           echo "Uploading release asset"
           ls -la
-          ls ${REPO}-${VERSION}.zip
-          gh release upload "${{ env.PUBLISH_TARGET }}" ${VERSION} ${REPO}-${VERSION}.zip
+          ls ${ARTIFACT}-${TARGET_VERSION}.zip
+          gh release upload "${{ env.PUBLISH_TARGET }}" ${TARGET_VERSION} ${GITHUB_WORKSPACE}/${ARTIFACT}-${TARGET_VERSION}.zip
+          # gh release upload "jefeish/test22" ${VERSION} ${REPO}-${VERSION}.zip
 
