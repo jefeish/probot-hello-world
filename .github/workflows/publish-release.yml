@@ -21,7 +21,7 @@ jobs:
           git fetch --tags
           LOCAL_TAG=$(git describe --tags --abbrev=0 $(git rev-list --tags --max-count=1))
           echo "LOCAL_TAG: $LOCAL_TAG"
-          echo ::set-output name=TAG::$(git describe --tags --abbrev=0 $(git rev-list --tags --max-count=1))
+          echo ::set-output name=LOCAL_TAG::LOCAL_TAG
 
       - name: Calculate next version
         id: next_version
@@ -41,7 +41,7 @@ jobs:
   
       - name: Zip release code
         run: |
-          zip -r ghec-health-check-artifact_${{ steps.next_version.outputs.NEW_TAG }}.zip . --exclude=".git/*"
+          zip -r ghec-health-check-artifact_${{ steps.get_local_tag.outputs.LOCAL_TAG }}.zip . --exclude=".git/*"
           # mkdir -p $GITHUB_WORKSPACE/releases
           echo "GITHUB_WORKSPACE: $GITHUB_WORKSPACE"
           ls -la
@@ -90,6 +90,7 @@ jobs:
         run: |
           ARTIFACT=ghec-health-check-artifact
           TARGET_VERSION=${{ steps.next_version.outputs.NEW_TAG }}
+          LOCAL_TAG=${{ steps.get_local_tag.outputs.LOCAL_TAG }}
           echo "TARGET_VERSION: $TARGET_VERSION"
 
           # Publish new release on downstream repository and attach release source code as release asset
@@ -100,7 +101,7 @@ jobs:
           echo "Uploading release asset"
           echo "PWD:"
           pwd
-          ls ${ARTIFACT}_${TARGET_VERSION}.zip
-          echo "zip-file: ${ARTIFACT}_${TARGET_VERSION}.zip"
-          gh release upload --repo ${{ env.PUBLISH_TARGET }} ${TARGET_VERSION} ${ARTIFACT}_${TARGET_VERSION}.zip --clobber
+          ls ${ARTIFACT}_${LOCAL_TAG}.zip
+          echo "zip-file: ${ARTIFACT}_${LOCAL_TAG}.zip"
+          gh release upload --repo ${{ env.PUBLISH_TARGET }} ${TARGET_VERSION} ${ARTIFACT}_${LOCAL_TAG}.zip --clobber
 
