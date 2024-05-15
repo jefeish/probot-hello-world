@@ -41,7 +41,7 @@ jobs:
           mkdir -p $GITHUB_WORKSPACE/releases
           echo "GITHUB_WORKSPACE: $GITHUB_WORKSPACE"
           ls -la
-          mv ghec-health-check-artifact.zip $GITHUB_WORKSPACE/releases/ghec-health-check-artifact-${{ steps.next_version.outputs.NEW_TAG }}.zip
+          mv ghec-health-check-artifact-${{ steps.next_version.outputs.NEW_TAG }}.zip $GITHUB_WORKSPACE/releases/ghec-health-check-artifact-${{ steps.next_version.outputs.NEW_TAG }}.zip
 
       # - name: Create tag
       #   run: git tag ${{ steps.next_version.outputs.NEW_TAG }}
