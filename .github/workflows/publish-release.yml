@@ -71,14 +71,32 @@ jobs:
       #     asset_name: ghec-health-check-artifact-${{ steps.next_version.outputs.NEW_TAG }}.zip
       #     asset_content_type: application/zip
 
+      # - name: Upload release asset to another Repo
+      #   run: |
+      #     REPO=ghec-health-check-artifact
+      #     VERSION=${{ steps.next_version.outputs.NEW_TAG }}
+      #     echo "VERSION: $VERSION"
+      #     # gh release upload ${{ env.PUBLISH_TARGET }} ${{ steps.create_release.outputs.upload_url }}:ghec-health-check-artifact-${{ steps.next_version.outputs.NEW_TAG }} --clobber
+      #     # Publish new release on downstream repository and attach release source code as release asset
+      #     echo "Publishing release on downstream repository"
+      #     gh release create ${VERSION} --title "${REPO} Release ${VERSION}" --repo "${{vars.PUBLISH_TARGET}}" --notes "Release ${VERSION}"
+      #     gh release upload --repo "${{vars.PUBLISH_TARGET}}" ${VERSION} ${REPO}-${VERSION}.zip
+
       - name: Upload release asset to another Repo
         run: |
           REPO=ghec-health-check-artifact
           VERSION=${{ steps.next_version.outputs.NEW_TAG }}
           echo "VERSION: $VERSION"
-          # gh release upload ${{ env.PUBLISH_TARGET }} ${{ steps.create_release.outputs.upload_url }}:ghec-health-check-artifact-${{ steps.next_version.outputs.NEW_TAG }} --clobber
+          # Get the latest tag from the downstream repository
+          LATEST_TAG=$(gh api repos/${{vars.PUBLISH_TARGET}}/tags --paginate | jq -r '.[0].name')
+
+          echo "Latest tag in the downstream repository: $LATEST_TAG"
+
           # Publish new release on downstream repository and attach release source code as release asset
-          echo "Publishing release on downstream repository"
-          gh release create ${VERSION} --title "${REPO} Release ${VERSION}" --repo "${{vars.PUBLISH_TARGET}}" --notes "Release ${VERSION}"
-          gh release upload --repo "${{vars.PUBLISH_TARGET}}" ${VERSION} ${REPO}-${VERSION}.zip
-          
+          echo "Creating release on downstream repository"
+          gh release create ${VERSION} --title "${REPO} Release ${VERSION}" --repo "${{ env.PUBLISH_TARGET }}" --notes "Release ${VERSION}"
+      
+          # Upload the .zip file as a release asset
+          echo "Uploading release asset"
+          gh release upload "${{ env.PUBLISH_TARGET }}" ${VERSION} ${REPO}-${VERSION}.zip
+
