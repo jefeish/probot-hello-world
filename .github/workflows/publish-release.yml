@@ -8,6 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      GH_TOKEN: ${{ secrets.PUBLISH_TOKEN }}
       PUBLISH_TARGET: jefeish/test22
       
     steps:
@@ -36,7 +37,7 @@ jobs:
   
       - name: Zip release code
         run: |
-          zip -r ghec-health-check-artifact.zip . --exclude=".git/*"
+          zip -r ghec-health-check-artifact-${{ steps.next_version.outputs.NEW_TAG }}.zip . --exclude=".git/*"
           mkdir -p $GITHUB_WORKSPACE/releases
           echo "GITHUB_WORKSPACE: $GITHUB_WORKSPACE"
           ls -la
@@ -79,5 +80,5 @@ jobs:
           # Publish new release on downstream repository and attach release source code as release asset
           echo "Publishing release on downstream repository"
           gh release create ${VERSION} --title "${REPO} Release ${VERSION}" --repo "${{vars.PUBLISH_TARGET}}" --notes "Release ${VERSION}"
-          gh release upload --repo "${{vars.PUBLISH_TARGET}}" ${VERSION} ${REPO}-${VERSION}.tar.gz
+          gh release upload --repo "${{vars.PUBLISH_TARGET}}" ${VERSION} ${REPO}-${VERSION}.zip
           
