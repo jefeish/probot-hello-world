@@ -31,9 +31,9 @@ jobs:
           # TAG="${{ steps.get_tag.outputs.TAG }}"
           # Strip leading 'v' or 'v's from the tag
           TAG=$(echo "$LATEST_TAG" | sed 's/^v*//')
-          MAJOR=$(echo $LATEST_TAG | cut -d. -f1)
-          MINOR=$(echo $LATEST_TAG | cut -d. -f2)
-          PATCH=$(( $(echo $LATEST_TAG | cut -d. -f3) + 1))
+          MAJOR=$(echo $TAG | cut -d. -f1)
+          MINOR=$(echo $TAG | cut -d. -f2)
+          PATCH=$(( $(echo $TAG | cut -d. -f3) + 1))
           NEW_TAG="v${MAJOR}.${MINOR}.${PATCH}"
           VERSION=$NEW_TAG
           echo "NEW_TAG: $NEW_TAG"
