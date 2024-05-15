@@ -25,7 +25,11 @@ jobs:
         id: next_version
         run: |
           # Get the latest tag from the downstream repository
-          LATEST_TAG=$(gh api repos/${{vars.PUBLISH_TARGET}}/tags --paginate | jq -r '.[0].name')
+          # LATEST_TAG=$(gh api repos/${{vars.PUBLISH_TARGET}}/tags --paginate | jq -r '.[0].name')
+          latest_semantic_version_tag=$(gh api repos/jefeish/test22/tags --paginate | jq -r 'map(select(.name | test("^v[0-9]+\\.[0-9]+\\.[0-9]+$"))) | map(.name | ltrimstr("v")) | sort_by(.[0].split(".") | map(tonumber)) | last')
+
+          LATEST_TAG=$(gh api repos/${{vars.PUBLISH_TARGET}}/tags --paginate | jq -r 'map(select(.name | test("^v[0-9]+\\.[0-9]+\\.[0-9]+$"))) | map(.name | ltrimstr("v")) | sort_by(.[0].split(".") | map(tonumber)) | last')
+
           echo "Latest tag in the downstream repository: $LATEST_TAG"
           
           # TAG="${{ steps.get_tag.outputs.TAG }}"
