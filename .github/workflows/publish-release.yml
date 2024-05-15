@@ -20,8 +20,9 @@ jobs:
           git show-ref
           git fetch --tags
           git show-ref
-          git describe --tags
-          git rev-list --tags
+          # git describe --tags
+          # git rev-list --tags
+          git describe --tags --abbrev=0 $(git rev-list --tags --max-count=1)
           echo "CURRENT_TAG: $(git describe --tags $(git rev-list --tags --max-count=1))"
           echo ::set-output name=TAG::$(git describe --tags $(git rev-list --tags --max-count=1))
 
