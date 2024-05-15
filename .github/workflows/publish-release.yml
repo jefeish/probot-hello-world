@@ -99,6 +99,6 @@ jobs:
           echo "PWD:"
           pwd
           ls ${ARTIFACT}_${TARGET_VERSION}.zip
-          echo "zip-file: ${GITHUB_WORKSPACE}/${ARTIFACT}_${TARGET_VERSION}.zip"
-          gh release upload "${{ env.PUBLISH_TARGET }}" ${TARGET_VERSION} "${GITHUB_WORKSPACE}/${ARTIFACT}_${TARGET_VERSION}.zip"
+          echo "zip-file: ${ARTIFACT}_${TARGET_VERSION}.zip"
+          gh release upload "${{ env.PUBLISH_TARGET }}" ${TARGET_VERSION} "${ARTIFACT}_${TARGET_VERSION}.zip"
 
