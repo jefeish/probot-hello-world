@@ -65,9 +65,9 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: <your_asset_path>
-          asset_name: <your_asset_name>
-          asset_content_type: <your_asset_content_type>
+          asset_path: ./ghec-health-check-artifact.zip
+          asset_name: ghec-health-check-artifact.zip
+          asset_content_type: application/zip
 
       - name: Upload release asset to another Repo
         run: |
