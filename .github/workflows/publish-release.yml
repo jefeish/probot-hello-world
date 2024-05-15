@@ -30,7 +30,7 @@ jobs:
           MINOR=$(echo $TAG | cut -d. -f2)
           PATCH=$(( $(echo $TAG | cut -d. -f3) + 1))
           NEW_TAG="v${MAJOR}.${MINOR}.${PATCH}"
-          VERSION=NEW_TAG
+          VERSION=$NEW_TAG
           echo "NEW_TAG: $NEW_TAG"
           echo ::set-output name=NEW_TAG::$NEW_TAG
   
@@ -73,9 +73,10 @@ jobs:
       - name: Upload release asset to another Repo
         run: |
           REPO=ghec-health-check-artifact
+          VERSION=${{ steps.next_version.outputs.VERSION }}
           # gh release upload ${{ env.PUBLISH_TARGET }} ${{ steps.create_release.outputs.upload_url }}:ghec-health-check-artifact-${{ steps.next_version.outputs.NEW_TAG }} --clobber
           # Publish new release on downstream repository and attach release source code as release asset
           echo "Publishing release on downstream repository"
-          gh release create ${{ steps.next_version.outputs.VERSION }} --title "${REPO} Release ${{ steps.next_version.outputs.VERSION }}" --repo "${{vars.PUBLISH_TARGET}}" --notes "Release ${{ steps.next_version.outputs.VERSION }}"
-          gh release upload --repo "${{vars.PUBLISH_TARGET}}" ${{ steps.next_version.outputs.VERSION }} ${REPO}-${{ steps.next_version.outputs.VERSION }}.tar.gz
+          gh release create ${VERSION} --title "${REPO} Release ${VERSION}" --repo "${{vars.PUBLISH_TARGET}}" --notes "Release ${VERSION}"
+          gh release upload --repo "${{vars.PUBLISH_TARGET}}" ${VERSION} ${REPO}-${VERSION}.tar.gz
           
