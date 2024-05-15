@@ -74,6 +74,7 @@ jobs:
         run: |
           REPO=ghec-health-check-artifact
           VERSION=${{ steps.next_version.outputs.VERSION }}
+          echo "VERSION: $VERSION"
           # gh release upload ${{ env.PUBLISH_TARGET }} ${{ steps.create_release.outputs.upload_url }}:ghec-health-check-artifact-${{ steps.next_version.outputs.NEW_TAG }} --clobber
           # Publish new release on downstream repository and attach release source code as release asset
           echo "Publishing release on downstream repository"
