@@ -17,29 +17,24 @@ jobs:
       - name: Get latest tag
         id: get_tag
         run: |
-          git show-ref
           git fetch --tags
-          git show-ref
-          # git describe --tags
-          # git rev-list --tags
-          git describe --tags --abbrev=0 $(git rev-list --tags --max-count=1)
-          echo "CURRENT_TAG: $(git describe --tags $(git rev-list --tags --max-count=1))"
-          echo ::set-output name=TAG::$(git describe --tags $(git rev-list --tags --max-count=1))
+          echo ::set-output name=TAG::$(git describe --tags --abbrev=0 $(git rev-list --tags --max-count=1))
 
       - name: Calculate next version
         id: next_version
         run: |
           TAG="${{ steps.get_tag.outputs.TAG }}"
-          echo "TAG: $TAG"
           MAJOR=$(echo $TAG | cut -d. -f1)
-          echo "MAJOR: $MAJOR"
           MINOR=$(echo $TAG | cut -d. -f2)
-          echo "MINOR: $MINOR"
           PATCH=$(( $(echo $TAG | cut -d. -f3) + 1))
-          echo "PATCH: $PATCH"
           NEW_TAG="v${MAJOR}.${MINOR}.${PATCH}"
-          echo "NEW_TAG: $NEW_TAG"
           echo ::set-output name=NEW_TAG::$NEW_TAG
+
+      - name: Zip release code
+        run: |
+          zip -r ghec-health-check-artifact.zip .
+          mkdir -p $GITHUB_WORKSPACE/releases
+          mv ghec-health-check-artifact.zip $GITHUB_WORKSPACE/releases/ghec-health-check-artifact-${{ steps.next_version.outputs.NEW_TAG }}.zip
 
       - name: Create tag
         run: git tag ${{ steps.next_version.outputs.NEW_TAG }}
@@ -65,10 +60,10 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./ghec-health-check-artifact.zip
-          asset_name: ghec-health-check-artifact.zip
+          asset_path: $GITHUB_WORKSPACE/releases/ghec-health-check-artifact-${{ steps.next_version.outputs.NEW_TAG }}.zip
+          asset_name: ghec-health-check-artifact-${{ steps.next_version.outputs.NEW_TAG }}.zip
           asset_content_type: application/zip
 
       - name: Upload release asset to another Repo
         run: |
-          gh release upload ${{ env.PUBLISH_TARGET }} ${{ steps.create_release.outputs.upload_url }}:<your_asset_name> --clobber
+          gh release upload ${{ env.PUBLISH_TARGET }} ${{ steps.create_release.outputs.upload_url }}:ghec-health-check-artifact-${{ steps.next_version.outputs.NEW_TAG }} --clobber
