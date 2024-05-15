@@ -17,7 +17,6 @@ jobs:
       - name: Get latest tag
         id: get_tag
         run: |
-          git describe --tags --abbrev=0
           git show-ref
           git fetch --tags
           git show-ref
