@@ -15,7 +15,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Get latest tag
+      - name: Get latest local tag
         id: get_tag
         run: |
           git fetch --tags
@@ -25,14 +25,10 @@ jobs:
         id: next_version
         run: |
           # Get the latest tag from the downstream repository
-          # LATEST_TAG=$(gh api repos/${{vars.PUBLISH_TARGET}}/tags --paginate | jq -r '.[0].name')
           LATEST_TAG=$(gh api repos/${{vars.PUBLISH_TARGET}}/tags --paginate | jq -r 'map(select(.name | test("^v[0-9]+\\.[0-9]+\\.[0-9]+$"))) | map(.name | ltrimstr("v")) | sort_by(. | split(".") | map(tonumber)) | last')
           
           echo "Latest tag in the downstream repository: $LATEST_TAG"
-          
-          # TAG="${{ steps.get_tag.outputs.TAG }}"
-          # Strip leading 'v' or 'v's from the tag
-          # TAG=$(echo "$LATEST_TAG" | sed 's/^v*//')
+
           MAJOR=$(echo $LATEST_TAG | cut -d. -f1)
           MINOR=$(echo $LATEST_TAG | cut -d. -f2)
           PATCH=$(( $(echo $LATEST_TAG | cut -d. -f3) + 1))
@@ -104,5 +100,5 @@ jobs:
           pwd
           ls ${ARTIFACT}-${TARGET_VERSION}.zip
           echo "zip-file: ${GITHUB_WORKSPACE}/${ARTIFACT}-${TARGET_VERSION}.zip"
-          gh release upload "${{ env.PUBLISH_TARGET }}" ${TARGET_VERSION} ${GITHUB_WORKSPACE}/${ARTIFACT}-${TARGET_VERSION}.zip
+          gh release upload ${{ env.PUBLISH_TARGET }} ${TARGET_VERSION} ${GITHUB_WORKSPACE}/${ARTIFACT}-${TARGET_VERSION}.zip
 
