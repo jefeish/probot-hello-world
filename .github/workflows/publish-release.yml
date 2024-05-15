@@ -24,13 +24,15 @@ jobs:
         id: next_version
         run: |
           TAG="${{ steps.get_tag.outputs.TAG }}"
+          # Strip leading 'v' or 'v's from the tag
+          TAG=$(echo "$TAG" | sed 's/^v*//')
           MAJOR=$(echo $TAG | cut -d. -f1)
           MINOR=$(echo $TAG | cut -d. -f2)
           PATCH=$(( $(echo $TAG | cut -d. -f3) + 1))
           NEW_TAG="v${MAJOR}.${MINOR}.${PATCH}"
           echo "NEW_TAG: $NEW_TAG"
           echo ::set-output name=NEW_TAG::$NEW_TAG
-
+  
       - name: Zip release code
         run: |
           zip -r ghec-health-check-artifact.zip . --exclude=".git/*"
