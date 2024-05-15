@@ -21,7 +21,7 @@ jobs:
           git fetch --tags
           LOCAL_TAG=$(git describe --tags --abbrev=0 $(git rev-list --tags --max-count=1))
           echo "LOCAL_TAG: $LOCAL_TAG"
-          echo ::set-output name=LOCAL_TAG::LOCAL_TAG
+          echo ::set-output name=LOCAL_TAG::$LOCAL_TAG
 
       - name: Calculate next version
         id: next_version
