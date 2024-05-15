@@ -1,7 +1,9 @@
 name: attach release artifact
 
 on:
-  workflow_dispatch:
+  push:
+    tags:
+      - 'v*' # Only trigger on tags starting with 'v' (assuming semantic versioning format)
 
 jobs:
   release:
