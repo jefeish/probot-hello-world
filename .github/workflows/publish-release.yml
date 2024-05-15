@@ -98,5 +98,7 @@ jobs:
       
           # Upload the .zip file as a release asset
           echo "Uploading release asset"
+          ls -la
+          ls ${REPO}-${VERSION}.zip
           gh release upload "${{ env.PUBLISH_TARGET }}" ${VERSION} ${REPO}-${VERSION}.zip
 
